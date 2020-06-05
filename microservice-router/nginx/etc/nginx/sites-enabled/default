@@ -1,0 +1,25 @@
+upstream camiloferrer-devices-ms {
+  server camiloferrer-devices-ms;
+}
+upstream camiloferrer-measures-ms {
+  server camiloferrer-measures-ms;
+}
+upstream camiloferrer-smarthome-gateway {
+  server  camiloferrer-smarthome-gateway;
+}
+
+server {
+  listen        80;
+  server_name   pasantiaseam.org;
+        location /camiloferrer/api/devices-ms/ {
+            proxy_pass http://camiloferrer-devices-ms/api/devices-ms/;
+        }
+        
+        location /camiloferrer/api/measures-ms/ {
+            proxy_pass http://camiloferrer-measures-ms/api/measures-ms/;
+        }
+        
+        location /camiloferrer/api/smarthome-gateway-ms/ {
+            proxy_pass http://camiloferrer-smarthome-gateway/api/smarthome-gateway-ms/;
+        }
+}
