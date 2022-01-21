@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "knex": "^0.20.7",
-    "log4js": "^6.1.0",
+    "log4js": "^6.4.0",
     "mock-knex": "^0.4.0",
     "moment-timezone": "^0.5.23",
     "morgan": "^1.9.1",
